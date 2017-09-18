@@ -4,8 +4,6 @@
              x:Class="MisCursosXamarin.DetailProduct" BackgroundColor="White">
 
     <ScrollView  >
-
-
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
