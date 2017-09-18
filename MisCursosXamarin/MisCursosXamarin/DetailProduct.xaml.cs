@@ -14,19 +14,21 @@ namespace MisCursosXamarin
     public partial class DetailProduct : ContentPage
     {
 
-        public DetailProduct()
+        public DetailProduct(JObject data)
         {
             InitializeComponent();
-            //JObject data = new JObject();
-            //var product = new Product()
-            //{
-            //    nombre = data["nombre"].ToString(),
-            //    codigo = data["codigo"].ToString(),
-            //    precioMillar = data["precioMillar"].ToString(),
-            //    precioCiento = data["precioCiento"].ToString(),
-            //    imagen = data["imagen"].ToString(),
-            //    colores = data["colores"].Select(s => (string)s).ToArray()
-            //};
+            
+            var product = new Product()
+            {
+                nombre = data["nombre"].ToString(),
+                codigo = data["codigo"].ToString(),
+                precioMillar = data["precioMillar"].ToString(),
+                precioCiento = data["precioCiento"].ToString(),
+                imagen = data["imagen"].ToString(),
+                colores = data["colores"].Select(s => (string)s).ToArray()
+            };
+
+            IMG.Source = product.imagen;
 
         }
     }

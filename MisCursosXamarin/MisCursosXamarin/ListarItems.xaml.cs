@@ -50,22 +50,22 @@ namespace MisCursosXamarin
 
             //DisplayAlert("Próximamente", (list.SelectedItem as Product).nombre, "Muschas Gracias");
 
-            //Product tmpObj = new Product()
-            //{
-            //    nombre = (list.SelectedItem as Product).nombre,
-            //    codigo= (list.SelectedItem as Product).codigo,
-            //    precioMillar= (list.SelectedItem as Product).precioMillar,
-            //    precioCiento= (list.SelectedItem as Product).precioCiento,
-            //    imagen= (list.SelectedItem as Product).imagen,
-            //    colores= (list.SelectedItem as Product).colores
-            //};
-            //var item = JObject.FromObject(tmpObj);
+            Product tmpObj = new Product()
+            {
+                nombre = (list.SelectedItem as Product).nombre,
+                codigo = (list.SelectedItem as Product).codigo,
+                precioMillar = (list.SelectedItem as Product).precioMillar,
+                precioCiento = (list.SelectedItem as Product).precioCiento,
+                imagen = (list.SelectedItem as Product).imagen,
+                colores = (list.SelectedItem as Product).colores
+            };
+            var item = JObject.FromObject(tmpObj);
 
-            //DetailProduct  ItemSelected = new DetailProduct();
+            DetailProduct ItemSelected = new DetailProduct(item);
 
-            //ItemSelected.Title = item["nombre"].ToString();
+            ItemSelected.Title = item["nombre"].ToString();
 
-            //Navigation.PushAsync(ItemSelected);
+            Navigation.PushAsync(ItemSelected);
         }
     }
 }

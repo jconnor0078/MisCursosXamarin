@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MisCursosXamarin.DetailProduct" BackgroundColor="White">
 
-    <ScrollView>
+    <ScrollView  >
+
 
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
@@ -21,7 +22,7 @@
             </Grid.RowDefinitions>
 
             <!--Header Imagen product -->
-            <Image Source="HeaderBackground.png" Grid.Row="0"
+            <Image x:Name="IMG" Grid.Row="0"
                    Aspect="AspectFill"
                    VerticalOptions="StartAndExpand"
                    HorizontalOptions="CenterAndExpand"
@@ -29,7 +30,8 @@
 
             <!--Product description and price -->
             <StackLayout Grid.Row="1" 
-                         BackgroundColor="White" Padding="10,25,0,0">
+                         BackgroundColor="White" Padding="5"
+                         >
                 <Label Text="SKMEI Children Sport Watches Fashion LED Quartz Digital Watch Boys Girls Kids 50M Waterproof WristWatches 1060"
                   Style="{StaticResource DescProductLabel}"/>
 
@@ -68,6 +70,7 @@
 
             <StackLayout Grid.Row="3" BackgroundColor="WhiteSmoke" Padding="0,10,0,0"  />
 
+            
             <StackLayout Grid.Row="4" 
                          Padding="10,10,0,0" >
                 <Label  Text="Discount and Coupons" HorizontalOptions="Start"
@@ -77,8 +80,9 @@
                        TextColor="Black" />
             </StackLayout>
 
+        
             <StackLayout Grid.Row="5" 
-                         Padding="10,5,0,0"  >
+                         Padding="10,5,0,10"  >
                 <Label  Text="Free Shipping" HorizontalOptions="Start"
                   Style="{StaticResource StatsNumberLabel}"/>
 
@@ -87,7 +91,7 @@
             </StackLayout>
             <StackLayout Grid.Row="6" BackgroundColor="WhiteSmoke" Padding="0,10,0,0"  />
 
-            <Grid Grid.Row="7">
+            <Grid Grid.Row="7" Padding="8">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -111,7 +115,7 @@
 
 
                 <Button Grid.Row="2" 
-                        Image="icons8-Tienda-50.png"
+                        Image="tienda.png"
                         HorizontalOptions="Start" 
                         BackgroundColor="White"
                         HeightRequest="50"
@@ -133,35 +137,64 @@
                         WidthRequest="100" />
             </Grid>
 
+            <StackLayout Grid.Row="8" BackgroundColor="WhiteSmoke" Padding="0,10,0,0"  />
 
+            <StackLayout Grid.Row="9" 
+                         Padding="10,10,0,10"  >
+                <Label  Text="Item Description" HorizontalOptions="Start"
+                  Style="{StaticResource StatsNumberLabel}"/>
+            </StackLayout>
+            
+            <Grid Grid.Row="9"  
+                  Margin="20,45,0,20">
 
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--Linea 1-->
+                <StackLayout Grid.Row="0"   Grid.Column="0" >
+                    <Label Text="Power Source" HorizontalOptions="Start" Style="{StaticResource startProductNumber}"></Label>
+                </StackLayout>
 
+                <StackLayout Grid.Row="0" HorizontalOptions="Start"    Grid.Column="1">
+                    <Label Text="Solar" TextColor="Black"/>
+                </StackLayout>
+                <!--Linea 2-->
+                <StackLayout Grid.Row="1"  Grid.Column="0">
+                    <Label Text="Style" HorizontalOptions="Start" Style="{StaticResource startProductNumber}"></Label>
+                </StackLayout>
 
+                <StackLayout Grid.Row="1" HorizontalOptions="Start" Grid.Column="1">
+                    <Label Text="Contemporary" TextColor="Black"/>
+                </StackLayout>
+                <!--Linea 3-->
+                <StackLayout Grid.Row="2"  Grid.Column="0">
+                    <Label Text="Base Type" HorizontalOptions="Start" Style="{StaticResource startProductNumber}"></Label>
+                </StackLayout>
 
+                <StackLayout Grid.Row="2" HorizontalOptions="Start" Grid.Column="1">
+                    <Label Text="None" TextColor="Black"/>
+                </StackLayout>
+                <!--Linea 4-->
+                <StackLayout Grid.Row="3"  Grid.Column="0">
+                    <Label Text="Certification" HorizontalOptions="Start" Style="{StaticResource startProductNumber}"></Label>
+                </StackLayout>
 
-
-
-
-            <!--follow button  -->
-            <!--<Button   Text="Follow"  
-                    Style="{StaticResource FollowButton}"
-                    Margin="20,0"
-                Grid.Row="4"/>-->
-
-            <!--Profile Image -->
-            <!--<Image Source="profilePhoto.png"
-                   VerticalOptions="End"
-                   HorizontalOptions="Center"
-                   HeightRequest="100"
-                   WidthRequest="100"
-                   TranslationY="50"></Image>-->
+                <StackLayout Grid.Row="3" HorizontalOptions="Start" Grid.Column="1">
+                    <Label Text="CE,PSE,FCC,RoHS" TextColor="Black"/>
+                </StackLayout>
+            </Grid>
+       
         </Grid>
 
 
     </ScrollView>
-
-
-
-
 
 </ContentPage>
