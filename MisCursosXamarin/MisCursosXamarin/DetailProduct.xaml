@@ -15,6 +15,9 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <!--Header Imagen product -->
@@ -22,58 +25,58 @@
                    Aspect="AspectFill"
                    VerticalOptions="StartAndExpand"
                    HorizontalOptions="CenterAndExpand"
-                   ></Image>
-            
+                   />
+
             <!--Product description and price -->
             <StackLayout Grid.Row="1" 
                          BackgroundColor="White" Padding="10,25,0,0">
                 <Label Text="SKMEI Children Sport Watches Fashion LED Quartz Digital Watch Boys Girls Kids 50M Waterproof WristWatches 1060"
                   Style="{StaticResource DescProductLabel}"/>
-                
+
                 <Label Text="US$ 500"  TextColor="DarkRed" Margin="0,15,0,0"
                        Style="{StaticResource PriceProductLabel}"/>
-                
+
             </StackLayout>
 
             <!--social status  -->
             <Grid Grid.Row="2"  
                   Margin="0,25">
-                
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <StackLayout Grid.Row="0" Grid.Column="0">
-                    <Label Text="450" Style="{StaticResource StatsNumberLabel}"></Label>
-                    <Label Text="Likes" Style="{StaticResource StatsCaptionLabel}"></Label>
+                <StackLayout  Grid.Column="0">
+                    <Label Text="450" Style="{StaticResource startProductNumber}"></Label>
+                    <Label Text="Likes" Style="{StaticResource startProductLabel}"></Label>
                 </StackLayout>
 
-                <StackLayout Grid.Row="0" Grid.Column="1">
-                    <Label Text="500" Style="{StaticResource StatsNumberLabel}"></Label>
-                    <Label Text="Fallolwing" Style="{StaticResource StatsCaptionLabel}"></Label>
+                <StackLayout   Grid.Column="1">
+                    <Label Text="500" Style="{StaticResource startProductNumber}"></Label>
+                    <Label Text="Orders" Style="{StaticResource startProductLabel}"></Label>
                 </StackLayout>
 
-                <StackLayout Grid.Row="0" Grid.Column="2">
-                    <Label Text="600" Style="{StaticResource StatsNumberLabel}"></Label>
-                    <Label Text="Followers" Style="{StaticResource StatsCaptionLabel}"></Label>
+                <StackLayout   Grid.Column="2">
+                    <Label Text="600" Style="{StaticResource startProductNumber}"></Label>
+                    <Label Text="Wishlist" Style="{StaticResource startProductLabel}"></Label>
                 </StackLayout>
             </Grid>
-            
+
             <!--add Coupon y add direccion de shipping  -->
 
             <StackLayout Grid.Row="3" BackgroundColor="WhiteSmoke" Padding="0,10,0,0"  />
 
             <StackLayout Grid.Row="4" 
                          Padding="10,10,0,0" >
-                 <Label  Text="Discount and Coupons" HorizontalOptions="Start"
+                <Label  Text="Discount and Coupons" HorizontalOptions="Start"
                   Style="{StaticResource StatsNumberLabel}"/>
 
                 <Label Text="No hay cupon seleccionado"  Margin="0,0,0,0" 
                        TextColor="Black" />
             </StackLayout>
-            
+
             <StackLayout Grid.Row="5" 
                          Padding="10,5,0,0"  >
                 <Label  Text="Free Shipping" HorizontalOptions="Start"
@@ -83,14 +86,60 @@
                        TextColor="Black" />
             </StackLayout>
             <StackLayout Grid.Row="6" BackgroundColor="WhiteSmoke" Padding="0,10,0,0"  />
-            
-            <StackLayout Grid.Row="7" 
+
+            <Grid Grid.Row="7">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0"  
                          Padding="10,5,0,0"  >
-                <Label  Text="Color" HorizontalOptions="Start"
+                    <Label Text="Color" HorizontalOptions="Start"
                   Style="{StaticResource StatsNumberLabel}"/>
-                <Label Text="Azul"  Margin="0,0,0,0" 
+
+                    <Label Text="Azul"  
                        TextColor="Black" />
-            </StackLayout>
+                </StackLayout>
+
+                <StackLayout  Grid.Row="0" 
+                               Padding="0,12,15,0" >
+                    <Label Grid.Column="1" Text="Select" HorizontalOptions="End" TextColor="CadetBlue"/>
+                </StackLayout>
+                <BoxView Margin="15,5,15,5"  Grid.Row="1"   HeightRequest="1" Color="LightGray"></BoxView>
+
+
+                <Button Grid.Row="2" 
+                        Image="icons8-Tienda-50.png"
+                        HorizontalOptions="Start" 
+                        BackgroundColor="White"
+                        HeightRequest="50"
+                        WidthRequest="100" />
+
+                <Button Grid.Row="2" 
+                        Text="ADD TO CART" 
+                        BorderRadius="0"
+                        BackgroundColor="LightPink" 
+                        HorizontalOptions="Center" 
+                    
+                        WidthRequest="125" />
+
+                <Button Grid.Row="2" 
+                        Text="BUY NOW" 
+                        BorderRadius="0"
+                        BackgroundColor="Red"                   
+                        HorizontalOptions="End" 
+                        WidthRequest="100" />
+            </Grid>
+
+
+
+
+
+
+
+
 
 
             <!--follow button  -->
